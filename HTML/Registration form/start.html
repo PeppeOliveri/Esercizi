@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Sign up</h1>
+    <form>
+      <label for="email">Enter your email*:</label>
+      <input type="email" name="email" required />
+      <label for="password">Create a password*:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        minlength="6"
+        maxlength="25"
+        required
+      />
+      <label for="name">Name*:</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        maxlength="20"
+        required
+        pattern="[A-Za-z]+"
+      />
+      <label for="lastname">Lastname*:</label>
+      <input
+        type="text"
+        name="lastname"
+        id="lastname"
+        maxlength="20"
+        required
+        pattern="[A-Za-z]+"
+      />
+      <label for="date">Date of birth</label>
+      <input type="date" name="date" id="date" />
+      <label for="number">Telephone number:</label>
+      <input type="tel" name="number" id="number" inputmode="numeric" />
+      <label for="plan">Choose your plan:</label>
+      <select name="plan" id="plan">
+        <option value="free_plan">Free plan</option>
+        <option value="20$_plan">20$ plan</option>
+        <option value="40$_plan">40$ plan</option>
+        <option value="50$_plan">50$ plan</option>
+      </select>
+      <label for="pro_plan">Pro Plan</label>
+      <input type="checkbox" name="pro_plan" id="pro_plan" checked />
+      <label for="ccn">Credit Card Number:</label>
+      <input
+        id="ccn"
+        type="tel"
+        inputmode="numeric"
+        pattern="[0-9\s]{13,19}"
+        autocomplete="cc-number"
+        maxlength="19"
+        placeholder="xxxx xxxx xxxx xxxx"
+      />
+      <label for="cvc">CVC:</label>
+      <input
+        name="cvc"
+        type="tel"
+        pattern="[0-9]"
+        maxlength="4"
+        placeholder="CVC"
+      />
+      <label for="credit-expires">Expiration date:</label>
+      <input
+        name="credit-expires"
+        type="tel"
+        pattern="[0-9]"
+        maxlength="7"
+        placeholder="MM / YY"
+      />
+      <label for="address">Billing address:</label>
+      <input
+        type="text"
+        name="address"
+        autocomplete="address"
+        maxlength="300"
+        required
+      />
+      <br />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
