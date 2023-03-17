@@ -1,0 +1,31 @@
+article {
+  font-family: sans-serif;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 2%;
+  width: 20vw;
+  height: auto;
+}
+img {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 2px rgb(175, 175, 175);
+  border-top-right-radius: 2%;
+  border-top-left-radius: 2%;
+}
+h2 {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+}
+p {
+  border-bottom: solid 2px rgb(175, 175, 175);
+  padding: 10px;
+  margin: 0;
+}
+div {
+  padding: 10px;
+}
+a:last-child {
+  position: relative;
+  left: 12px;
+}
