@@ -1,0 +1,71 @@
+h1,
+ul,
+li,
+input,
+button {
+  display: inline-block;
+  padding: 2px 5px 2px 5px;
+}
+nav {
+  background-color: rgb(52, 52, 65);
+  font-family: sans-serif;
+}
+h1 {
+  color: white;
+  font-weight: 100;
+  font-size: 20px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+li:last-child a {
+  color: gray;
+}
+li:nth-child(2) a {
+  color: gray;
+}
+label {
+  color: gray;
+  position: relative;
+  left: 13px;
+}
+select {
+  color: gray;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(52, 52, 65);
+}
+button {
+  color: green;
+  border: solid 2px green;
+  background-color: rgb(52, 52, 65);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: green;
+  color: white;
+}
+option {
+  background-color: rgb(52, 52, 65);
+}
+input {
+  padding: 10px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 768px) {
+  ul,
+  li,
+  input,
+  button {
+    display: none;
+  }
+}
