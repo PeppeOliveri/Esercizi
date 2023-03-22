@@ -1,0 +1,17 @@
+:root {
+  --blue: blue;
+  --width: 150px;
+  --height: 150px;
+  --bgcolor: rgb(176, 91, 105);
+  --bradius: 75px;
+}
+body {
+  background-color: var(--blue);
+}
+
+.ball {
+  width: var(--width);
+  height: var(--height);
+  background-color: var(--bgcolor);
+  border-radius: var(--bradius);
+}
