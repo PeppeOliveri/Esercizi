@@ -1,0 +1,67 @@
+#sez {
+  font-family: sans-serif;
+  background-color: white;
+  border: 1px solid rgb(161, 160, 160);
+  width: 378px;
+  height: 100%;
+  border-radius: 10px;
+  font-size: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 40px 40px 40px 40px 40px;
+  grid-template-areas:
+    "digit digit digit digit"
+    "oper oper oper oper"
+    "number number number uguale"
+    "number number number uguale"
+    "number number number uguale"
+    "number number number uguale";
+}
+#digit {
+  text-align: end;
+  background-color: rgb(69, 68, 68);
+  color: white;
+  grid-area: digit;
+  font-size: 30px;
+  padding: 1% 2% 0% 0%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#oper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-area: oper;
+}
+#oper > div {
+  border: 1px solid rgb(161, 160, 160);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: rgb(212, 215, 233);
+}
+#number {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-area: number;
+}
+#number > div {
+  background-color: azure;
+  border: 1px solid rgb(161, 160, 160);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#number > div:nth-child(10) {
+  border-bottom-left-radius: 10px;
+}
+#uguale {
+  grid-area: uguale;
+  background-color: rgb(213, 114, 114);
+  border: 1px solid rgb(161, 160, 160);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border-bottom-right-radius: 10px;
+}
