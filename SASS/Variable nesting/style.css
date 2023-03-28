@@ -1,0 +1,27 @@
+div {
+  border: 1px solid red;
+}
+div h1 {
+  color: green;
+  text-align: center;
+  -webkit-text-decoration: 1px underline blue;
+          text-decoration: 1px underline blue;
+  text-underline-offset: 8px;
+}
+div section {
+  display: flex;
+  padding: 0% 1% 1% 1%;
+}
+div section article {
+  border: 1px solid green;
+}
+div section article p {
+  text-align: center;
+  padding: 4%;
+}
+div section article:nth-of-type(odd) {
+  color: blue;
+}
+div section article:nth-of-type(even) {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
