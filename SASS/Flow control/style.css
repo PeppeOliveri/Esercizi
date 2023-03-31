@@ -1,0 +1,230 @@
+.container {
+  border: 0.0625rem solid red;
+  padding: 1%;
+}
+.container .class, .container .class2, .container .h2_class2, .container .h1_class {
+  color: green;
+  text-align: center;
+  -webkit-text-decoration: 0.0625rem underline blue;
+          text-decoration: 0.0625rem underline blue;
+  text-underline-offset: 0.5rem;
+}
+.container .class2, .container .h2_class2 {
+  padding: 1rem;
+  border: 0.0625rem solid red;
+  text-decoration: none;
+}
+.container section:first-of-type {
+  display: flex;
+}
+.container section:first-of-type article:nth-of-type(odd) {
+  color: blue;
+  font-size: 1rem;
+  border: 0.0625rem solid green;
+  text-align: center;
+  margin-bottom: 1%;
+}
+.container section:first-of-type article:nth-of-type(even) {
+  color: red;
+  font-size: 1rem;
+  border: 0.0625rem solid green;
+  text-align: center;
+  margin-bottom: 1%;
+}
+.container section:last-child article {
+  color: green;
+  font-size: 1.5rem;
+  border: 0.0625rem solid blue;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxes div:nth-child(1) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  color: #0d0d0d;
+}
+
+.boxes div:nth-child(2) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #e6e6e6;
+  color: #1a1a1a;
+}
+
+.boxes div:nth-child(3) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #d9d9d9;
+  color: #262626;
+}
+
+.boxes div:nth-child(4) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #cccccc;
+  color: #333333;
+}
+
+.boxes div:nth-child(5) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #bfbfbf;
+  color: #404040;
+}
+
+.boxes div:nth-child(6) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #b3b3b3;
+  color: #4d4d4d;
+}
+
+.boxes div:nth-child(7) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #a6a6a6;
+  color: #595959;
+}
+
+.boxes div:nth-child(8) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #999999;
+  color: #666666;
+}
+
+.boxes div:nth-child(9) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #8c8c8c;
+  color: #737373;
+}
+
+.boxes div:nth-child(10) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: gray;
+  color: gray;
+  background-color: blue;
+  color: red;
+}
+
+.boxes div:nth-child(11) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #737373;
+  color: #8c8c8c;
+}
+
+.boxes div:nth-child(12) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #666666;
+  color: #999999;
+}
+
+.boxes div:nth-child(13) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #595959;
+  color: #a6a6a6;
+}
+
+.boxes div:nth-child(14) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #4d4d4d;
+  color: #b3b3b3;
+}
+
+.boxes div:nth-child(15) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #404040;
+  color: #bfbfbf;
+}
+
+.boxes div:nth-child(16) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #333333;
+  color: #cccccc;
+}
+
+.boxes div:nth-child(17) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #262626;
+  color: #d9d9d9;
+}
+
+.boxes div:nth-child(18) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+
+.boxes div:nth-child(19) {
+  border: 1px solid red;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+.fs-1rem {
+  font-size: 1rem;
+}
+
+.fs-2rem {
+  font-size: 2rem;
+}
+
+.fs-3rem {
+  font-size: 3rem;
+}/*# sourceMappingURL=style.css.map */
