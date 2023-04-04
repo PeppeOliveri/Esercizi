@@ -52,17 +52,17 @@ body {
 .text {
   margin: 5% 3%;
 }
-@media (max-width: 375px) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-}
 @media (max-width: 768px) {
   body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+  }
+  @media (max-width: 375px) {
+    body {
+      display: flex;
+      flex-direction: column;
+    }
   }
   #primo {
     margin-bottom: 5%;
