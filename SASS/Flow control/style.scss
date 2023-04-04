@@ -1,0 +1,79 @@
+@use "module.scss" as m;
+@use "function.scss" as f;
+
+@mixin article-tags($color, $border-color, $font-size: 1rem) {
+  color: $color;
+  font-size: $font-size;
+  border: f.rem(1px) solid $border-color;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+.container {
+  border: f.rem(1px) solid m.$red;
+  padding: 1%;
+
+  .class {
+    color: m.$green;
+    text-align: center;
+    text-decoration: f.rem(1px) underline m.$blue;
+    text-underline-offset: f.rem(8px);
+  }
+  .h1 {
+    &_class {
+      @extend .class;
+    }
+  }
+  .class2 {
+    @extend .class;
+    padding: 1rem;
+    border: f.rem(1px) solid m.$red;
+    text-decoration: none;
+  }
+  .h2 {
+    &_class2 {
+      @extend .class2;
+    }
+  }
+  section:first-of-type {
+    display: flex;
+    article:nth-of-type(odd) {
+      @include article-tags(m.$blue, m.$green);
+    }
+    article:nth-of-type(even) {
+      @include article-tags(m.$red, m.$green);
+    }
+  }
+  section:last-child {
+    article {
+      @include article-tags(m.$green, m.$blue, $font-size: f.rem(24px));
+    }
+  }
+}
+.boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+$background: white;
+$text_color: black;
+@for $var from 1 to 20 {
+  .boxes div:nth-child(#{$var}) {
+    border: 1px solid m.$red;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+    background-color: darken($background, $amount: 5% * $var);
+    color: lighten($text_color, $amount: 5% * $var);
+    @if $var == 10 {
+      background-color: m.$blue;
+      color: m.$red;
+    }
+  }
+}
+$size: 1rem 2rem 3rem;
+@each $number in $size {
+  .fs-#{$number} {
+    font-size: $number;
+  }
+}

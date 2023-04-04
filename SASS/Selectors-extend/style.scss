@@ -1,0 +1,52 @@
+@use "module.scss" as m;
+@use "function.scss" as f;
+
+@mixin article-tags($color, $border-color, $font-size: 1rem) {
+  color: $color;
+  font-size: $font-size;
+  border: f.rem(1px) solid $border-color;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+div {
+  border: f.rem(1px) solid m.$red;
+  padding: 1%;
+
+  .class {
+    color: m.$green;
+    text-align: center;
+    text-decoration: f.rem(1px) underline m.$blue;
+    text-underline-offset: f.rem(8px);
+  }
+  .h1 {
+    &_class {
+      @extend .class;
+    }
+  }
+  .class2 {
+    @extend .class;
+    padding: 1rem;
+    border: f.rem(1px) solid m.$red;
+    text-decoration: none;
+  }
+  .h2 {
+    &_class2 {
+      @extend .class2;
+    }
+  }
+  section:first-of-type {
+    display: flex;
+    article:nth-of-type(odd) {
+      @include article-tags(m.$blue, m.$green);
+    }
+    article:nth-of-type(even) {
+      @include article-tags(m.$red, m.$green);
+    }
+  }
+  section:last-child {
+    article {
+      @include article-tags(m.$green, m.$blue, $font-size: f.rem(24px));
+    }
+  }
+}

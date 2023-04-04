@@ -1,0 +1,35 @@
+div {
+  border: 1px solid red;
+  padding: 1%;
+}
+div h1 {
+  color: green;
+  text-align: center;
+  -webkit-text-decoration: 1px underline blue;
+          text-decoration: 1px underline blue;
+  text-underline-offset: 8px;
+}
+div section:first-of-type {
+  display: flex;
+}
+div section:first-of-type article:nth-of-type(odd) {
+  color: blue;
+  font-size: 1rem;
+  border: 1px solid green;
+  text-align: center;
+  margin-bottom: 1%;
+}
+div section:first-of-type article:nth-of-type(even) {
+  color: red;
+  font-size: 1rem;
+  border: 1px solid green;
+  text-align: center;
+  margin-bottom: 1%;
+}
+div section:last-child article {
+  color: green;
+  font-size: 24px;
+  border: 1px solid blue;
+  text-align: center;
+  margin-bottom: 1%;
+}/*# sourceMappingURL=style.css.map */

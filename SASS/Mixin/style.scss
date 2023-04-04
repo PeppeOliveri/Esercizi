@@ -1,0 +1,31 @@
+@mixin article-tags($color, $border-color, $font-size: 1rem) {
+  color: $color;
+  font-size: $font-size;
+  border: 1px solid $border-color;
+  text-align: center;
+  margin-bottom: 1%;
+}
+div {
+  border: 1px solid red;
+  padding: 1%;
+  h1 {
+    color: green;
+    text-align: center;
+    text-decoration: 1px underline blue;
+    text-underline-offset: 8px;
+  }
+  section:first-of-type {
+    display: flex;
+    article:nth-of-type(odd) {
+      @include article-tags(blue, green);
+    }
+    article:nth-of-type(even) {
+      @include article-tags(red, green);
+    }
+  }
+  section:last-child {
+    article {
+      @include article-tags(green, blue, $font-size: 24px);
+    }
+  }
+}
