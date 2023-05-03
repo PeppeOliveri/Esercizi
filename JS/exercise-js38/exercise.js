@@ -23,6 +23,6 @@ function secondProm(num) {
   });
 }
 
-firstProm(false)
+firstProm(isLogged)
   .then((num) => secondProm(num))
   .catch((err) => console.log(err));
