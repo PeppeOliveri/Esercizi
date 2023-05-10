@@ -1,24 +1,19 @@
 <html>
   <body>
-    <div id="container" style="display: flex; align-items: center"></div>
+    <div id="container" style="display: flex; align-items: center">
+      <ul></ul>
+    </div>
   </body>
 </html>
 
 <script>
   async function todo() {
-    let response = await fetch("https://jsonplaceholder.typicode.com/todos/4");
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos");
     let json = await response.json();
-    let title = json.title;
-    let statusCheckBox = json.completed;
-    let h2 = document.createElement("h2");
-    let content = document.createTextNode(title);
-    h2.appendChild(content);
-    let div = document.getElementById("container");
-    div.appendChild(h2);
-    let input = document.createElement("input");
-    input.setAttribute("type", "checkbox");
-    input.setAttribute("checked", statusCheckBox);
-    div.appendChild(input);
+    let ul = document.querySelector("ul");
+    let list = await json.forEach((element) => {
+      ul.insertAdjacentHTML("beforeend", `<li>${element.title}</li>`);
+    });
   }
   todo();
 </script>
