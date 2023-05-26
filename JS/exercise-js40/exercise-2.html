@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center">
+      <ul></ul>
+    </div>
+  </body>
+</html>
+
+<script>
+  async function todo() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    let json = await response.json();
+    let ul = document.querySelector("ul");
+    let list = await json.forEach((element) => {
+      ul.insertAdjacentHTML("beforeend", `<li>${element.title}</li>`);
+    });
+  }
+  todo();
+</script>
