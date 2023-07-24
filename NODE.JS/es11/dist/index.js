@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const planets_1 = require("./controllers/planets");
+const users_js_1 = require("./controllers/users.js");
 const multer_1 = __importDefault(require("multer"));
 const storage = multer_1.default.diskStorage({
     destination: (req, file, cb) => {
@@ -24,6 +25,8 @@ app.post("/api/planets", planets_1.create);
 app.put("/api/planets/:id", planets_1.updateById);
 app.delete("/api/planets/:id", planets_1.deleteById);
 app.post("/api/planets/:id/image", upload.single("image"), planets_1.createImage);
+app.post("/api/users/login", users_js_1.login);
+app.post("/api/users/signup", users_js_1.signup);
 app.listen(port, () => {
     console.log(`Example app listening on port http://localhost:${port}`);
 });
