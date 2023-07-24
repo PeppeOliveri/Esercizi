@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteById = exports.updateById = exports.create = exports.getOneById = exports.getAll = void 0;
+exports.createImage = exports.deleteById = exports.updateById = exports.create = exports.getOneById = exports.getAll = void 0;
 const joi_1 = __importDefault(require("joi"));
 const pg_promise_1 = __importDefault(require("pg-promise"));
 const db = (0, pg_promise_1.default)()("postgress://postgres:superuser@localhost:5432/planets");
@@ -22,7 +22,8 @@ const setupDb = () => __awaiter(void 0, void 0, void 0, function* () {
 
   CREATE TABLE planets (
     id SERIAL NOT NULL PRIMARY KEY,
-    name TEXT NOT NULL
+    name TEXT NOT NULL,
+    image TEXT
   );
   `);
     yield db.none(`INSERT INTO planets (name) VALUES ('Earth')`);
@@ -70,3 +71,17 @@ const deleteById = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     res.status(200).json({ msg: "The Planet  was deleted" });
 });
 exports.deleteById = deleteById;
+const createImage = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    var _a;
+    console.log(req.file);
+    const { id } = req.params;
+    const fileName = (_a = req.file) === null || _a === void 0 ? void 0 : _a.path;
+    if (fileName) {
+        db.none(`UPDATE planets SET image=$2 WHERE id=$1`, [id, fileName]);
+        res.status(201).json({ msg: "Planet image uploaded succesfully" });
+    }
+    else {
+        res.status(400).json({ msg: "Planet image failed to upload" });
+    }
+});
+exports.createImage = createImage;
