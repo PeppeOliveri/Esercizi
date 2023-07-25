@@ -35,7 +35,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.signup = exports.login = void 0;
+exports.logout = exports.signup = exports.login = void 0;
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 const db_1 = require("../db");
@@ -70,3 +70,9 @@ const signup = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 exports.signup = signup;
+const logout = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const user = req.user;
+    yield db_1.db.none(`UPDATE users SET token=$2 WHERE id=$1`, [user === null || user === void 0 ? void 0 : user.id, null]);
+    res.status(200).json({ msg: "Logout succesful" });
+});
+exports.logout = logout;

@@ -7,6 +7,8 @@ const express_1 = __importDefault(require("express"));
 const planets_1 = require("./controllers/planets");
 const users_js_1 = require("./controllers/users.js");
 const multer_1 = __importDefault(require("multer"));
+const authorize_1 = __importDefault(require("./authorize"));
+require("./passport.js");
 const storage = multer_1.default.diskStorage({
     destination: (req, file, cb) => {
         cb(null, "./uploads");
@@ -27,6 +29,7 @@ app.delete("/api/planets/:id", planets_1.deleteById);
 app.post("/api/planets/:id/image", upload.single("image"), planets_1.createImage);
 app.post("/api/users/login", users_js_1.login);
 app.post("/api/users/signup", users_js_1.signup);
+app.get("/api/users/logout", authorize_1.default, users_js_1.logout);
 app.listen(port, () => {
     console.log(`Example app listening on port http://localhost:${port}`);
 });
